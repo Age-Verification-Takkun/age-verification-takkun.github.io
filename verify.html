@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>年齢確認</title>
+  <link rel="stylesheet" href="css/style.css">
+  <noscript>
+    <style>body{display:none}</style>
+    <p>JavaScriptを有効にしてください。</p>
+  </noscript>
+</head>
+<body>
+  <h1>年齢確認</h1>
+
+  <div class="terms" id="terms">
+    <p>本サービスは13歳以上の方のみ利用できます。</p>
+    <p>13歳未満の方は利用できません。</p>
+    <p>スクロールして内容を確認してください。</p>
+    <p style="margin-top:600px">以上</p>
+  </div>
+
+  <button id="agree" disabled>同意する</button>
+
+  <div id="form" style="display:none">
+    <h2>生年月日を入力してください</h2>
+    <select id="year"></select>
+    <select id="month"></select>
+    <select id="day"></select>
+    <br><br>
+    <button onclick="checkAge()">確認</button>
+    <p id="msg"></p>
+  </div>
+
+  <script src="js/verify.js"></script>
+</body>
+</html>
