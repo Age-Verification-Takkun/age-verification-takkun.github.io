@@ -2,11 +2,46 @@
 <html lang="ja">
 <head>
   <meta charset="UTF-8">
-  <title>My Site</title>
-  <script src="js/guard.js"></script>
+  <title>Age Verified Site</title>
+  <link rel="stylesheet" href="styles.css">
+
+  <noscript>
+    <style>body{display:none}</style>
+    <p>JavaScriptを有効にしてください。</p>
+  </noscript>
 </head>
 <body>
+
+<!-- 年齢確認画面 -->
+<div id="verify">
+  <h1>年齢確認</h1>
+
+  <div class="terms" id="terms">
+    <p>本サービスは13歳以上の方のみ利用できます。</p>
+    <p>13歳未満の方は利用できません。</p>
+    <p>スクロールして最後まで確認してください。</p>
+    <p style="margin-top:600px">以上</p>
+  </div>
+
+  <button id="agree" disabled>同意する</button>
+
+  <div id="birth" class="hidden">
+    <h2>生年月日を入力</h2>
+    <select id="year"></select>
+    <select id="month"></select>
+    <select id="day"></select>
+    <br><br>
+    <button id="check">確認</button>
+    <p id="msg"></p>
+  </div>
+</div>
+
+<!-- 本来のコンテンツ -->
+<div id="content" class="hidden">
   <h1>ようこそ</h1>
-  <p>ここは13歳以上向けコンテンツです。</p>
+  <p>ここは13歳以上向けのコンテンツです。</p>
+</div>
+
+<script src="script.js"></script>
 </body>
 </html>
